@@ -1,0 +1,2 @@
+globals.o: src/core/globals.cpp include/core/globals.h include/config.h \
+ include/util/exec_tracker.h include/util/logging.h

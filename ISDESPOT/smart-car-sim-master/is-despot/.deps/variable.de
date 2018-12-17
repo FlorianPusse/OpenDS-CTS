@@ -1,0 +1,2 @@
+variable.o: src/pomdpx/parser/variable.cpp \
+ include/pomdpx/parser/variable.h include/util/util.h

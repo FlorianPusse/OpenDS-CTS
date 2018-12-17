@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://opends.eu/drivingtask/scenario"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://opends.eu/drivingtask/scenario ../../Schema/scenario.xsd">
+
+	<environment>
+		<weather>
+			<snowingPercentage>-1</snowingPercentage>
+			<rainingPercentage>-1</rainingPercentage>
+			<fogPercentage>-1</fogPercentage>
+		</weather>
+	</environment>
+
+	<driver>
+		<car id="" ref="driverCar" profile="">
+			<tires profile="">
+				<type>winter</type>
+				<size>16</size>
+			</tires>
+			<engine profile="">
+				<engineOn>true</engineOn>
+				<minSpeed>0</minSpeed>
+				<maxSpeed>180</maxSpeed>
+				<acceleration>3.5</acceleration>
+				<minRPM>750</minRPM>
+				<maxRPM>7500</maxRPM>
+			</engine>
+			<transmission>
+				<automatic>true</automatic>
+				<reverse>3.182</reverse>
+				<forward>
+					<vector jtype="java_lang_Float" size="6">
+						<entry>3.615</entry>
+						<entry>1.955</entry>
+						<entry>1.281</entry>
+						<entry>0.973</entry>
+						<entry>0.778</entry>
+						<entry>0.646</entry>
+					</vector>
+				</forward>
+			</transmission>
+			<suspension>
+				<stiffness>120</stiffness>
+				<compression>0.2</compression>
+				<damping>0.3</damping>
+			</suspension>
+			<wheel>
+				<frictionSlip>50</frictionSlip>
+			</wheel>
+			<brake profile="">
+				<decelerationFreeWheel>2.0</decelerationFreeWheel>
+				<decelerationBrake>10</decelerationBrake>
+			</brake>
+		</car>
+	</driver>
+
+	<traffic>
+		<pedestrian id="ped1">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>6.0</maxSpeed>
+			<giveWayDistance>0.1</giveWayDistance>
+			<intersectionObservationDistance>15.0</intersectionObservationDistance>
+			<minIntersectionClearance>5.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_24</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped2">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>4.0</maxSpeed>
+			<giveWayDistance>0.0</giveWayDistance>
+			<intersectionObservationDistance>0.0</intersectionObservationDistance>
+			<minIntersectionClearance>0.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_30</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped3">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>5.0</maxSpeed>
+			<giveWayDistance>0.5</giveWayDistance>
+			<intersectionObservationDistance>0.5</intersectionObservationDistance>
+			<minIntersectionClearance>0.5</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_48</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped4">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>7.0</maxSpeed>
+			<giveWayDistance>15.0</giveWayDistance>
+			<intersectionObservationDistance>15.0</intersectionObservationDistance>
+			<minIntersectionClearance>5.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_68</startWayPoint>
+		</pedestrian>
+	</traffic>
+
+	<road>
+		<wayPoints debug="false">
+			<wayPoint id="WP_1"><translation><vector jtype="java_lang_Float" size="3"><entry>-291.28476</entry><entry>0.15636063</entry><entry>-72.98613</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_2"><translation><vector jtype="java_lang_Float" size="3"><entry>-286.66672</entry><entry>0.15634918</entry><entry>-85.48613</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_3"><translation><vector jtype="java_lang_Float" size="3"><entry>-323.24664</entry><entry>-0.053676605</entry><entry>14.114586</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_4"><translation><vector jtype="java_lang_Float" size="3"><entry>-297.53476</entry><entry>0.15634537</entry><entry>-89.513916</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_5"><translation><vector jtype="java_lang_Float" size="3"><entry>-291.28476</entry><entry>0.15635681</entry><entry>-101.73614</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_6"><translation><vector jtype="java_lang_Float" size="3"><entry>-286.2848</entry><entry>-0.0036392212</entry><entry>-101.666695</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_7"><translation><vector jtype="java_lang_Float" size="3"><entry>-260.2779</entry><entry>9.546387</entry><entry>-177.76045</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_8"><translation><vector jtype="java_lang_Float" size="3"><entry>-246.73624</entry><entry>50.342567</entry><entry>-178.15974</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_9"><translation><vector jtype="java_lang_Float" size="3"><entry>-330.39938</entry><entry>50.326748</entry><entry>-10.295149</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_10"><translation><vector jtype="java_lang_Float" size="3"><entry>-324.5487</entry><entry>50.342453</entry><entry>-27.031261</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_11"><translation><vector jtype="java_lang_Float" size="3"><entry>-293.80197</entry><entry>23.356411</entry><entry>-50.902927</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_12"><translation><vector jtype="java_lang_Float" size="3"><entry>-290.0523</entry><entry>0.15635681</entry><entry>-61.024345</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_13"><translation><vector jtype="java_lang_Float" size="3"><entry>-285.2952</entry><entry>20.956337</entry><entry>-70.8681</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_14"><translation><vector jtype="java_lang_Float" size="3"><entry>-281.66666</entry><entry>11.356335</entry><entry>-86.23283</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_15"><translation><vector jtype="java_lang_Float" size="3"><entry>-278.15967</entry><entry>46.556297</entry><entry>-94.60087</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_16"><translation><vector jtype="java_lang_Float" size="3"><entry>-276.42368</entry><entry>27.356318</entry><entry>-98.368004</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_17"><translation><vector jtype="java_lang_Float" size="3"><entry>-271.4584</entry><entry>36.956306</entry><entry>-97.46523</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_18"><translation><vector jtype="java_lang_Float" size="3"><entry>-267.5871</entry><entry>0.156353</entry><entry>-107.36117</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_19"><translation><vector jtype="java_lang_Float" size="3"><entry>-262.65625</entry><entry>36.956306</entry><entry>-117.53476</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_20"><translation><vector jtype="java_lang_Float" size="3"><entry>-259.01035</entry><entry>12.956337</entry><entry>-126.77102</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_21"><translation><vector jtype="java_lang_Float" size="3"><entry>-254.01039</entry><entry>9.756332</entry><entry>-138.10767</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_22"><translation><vector jtype="java_lang_Float" size="3"><entry>-248.38564</entry><entry>0.15636826</entry><entry>-153.22925</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_23"><translation><vector jtype="java_lang_Float" size="3"><entry>-250.5731</entry><entry>0.15637207</entry><entry>-157.36122</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_24"><translation><vector jtype="java_lang_Float" size="3"><entry>-248.12515</entry><entry>0.1563797</entry><entry>-165.12166</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_25"><translation><vector jtype="java_lang_Float" size="3"><entry>-249.21889</entry><entry>0.1563797</entry><entry>-169.96541</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_26"><translation><vector jtype="java_lang_Float" size="3"><entry>-245.79868</entry><entry>35.35629</entry><entry>-174.63544</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_27"><translation><vector jtype="java_lang_Float" size="3"><entry>-241.8229</entry><entry>28.156317</entry><entry>-178.47227</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_28"><translation><vector jtype="java_lang_Float" size="3"><entry>-238.75008</entry><entry>0.15639114</entry><entry>-184.63553</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_29"><translation><vector jtype="java_lang_Float" size="3"><entry>-237.11801</entry><entry>49.037292</entry><entry>-185.955</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_30"><translation><vector jtype="java_lang_Float" size="3"><entry>-237.91678</entry><entry>0.15639496</entry><entry>-187.96887</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_31"><translation><vector jtype="java_lang_Float" size="3"><entry>-235.22571</entry><entry>48.956287</entry><entry>-194.82642</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_32"><translation><vector jtype="java_lang_Float" size="3"><entry>-237.55205</entry><entry>50.35629</entry><entry>-189.87862</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_33"><translation><vector jtype="java_lang_Float" size="3"><entry>-233.88885</entry><entry>10.330536</entry><entry>-199.37514</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_34"><translation><vector jtype="java_lang_Float" size="3"><entry>-230.22578</entry><entry>0.1564064</entry><entry>-204.47937</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_35"><translation><vector jtype="java_lang_Float" size="3"><entry>-223.62846</entry><entry>24.956362</entry><entry>-218.26392</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_36"><translation><vector jtype="java_lang_Float" size="3"><entry>-220.97217</entry><entry>4.156418</entry><entry>-231.40637</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_37"><translation><vector jtype="java_lang_Float" size="3"><entry>-213.03827</entry><entry>15.356403</entry><entry>-248.00348</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_38"><translation><vector jtype="java_lang_Float" size="3"><entry>-217.3438</entry><entry>0.15643692</entry><entry>-239.25365</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_39"><translation><vector jtype="java_lang_Float" size="3"><entry>-209.96523</entry><entry>33.75635</entry><entry>-254.06265</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_40"><translation><vector jtype="java_lang_Float" size="3"><entry>-224.68744</entry><entry>18.556408</entry><entry>-260.38208</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_41"><translation><vector jtype="java_lang_Float" size="3"><entry>-226.0244</entry><entry>37.756336</entry><entry>-253.15971</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_42"><translation><vector jtype="java_lang_Float" size="3"><entry>-230.81604</entry><entry>0.15641785</entry><entry>-244.04524</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_43"><translation><vector jtype="java_lang_Float" size="3"><entry>-234.53131</entry><entry>0.15641785</entry><entry>-235.7119</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_44"><translation><vector jtype="java_lang_Float" size="3"><entry>-238.38548</entry><entry>0.15641785</entry><entry>-227.17024</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_45"><translation><vector jtype="java_lang_Float" size="3"><entry>-242.34378</entry><entry>0.15641403</entry><entry>-218.52443</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_46"><translation><vector jtype="java_lang_Float" size="3"><entry>-246.51044</entry><entry>0.15641785</entry><entry>-209.84386</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_47"><translation><vector jtype="java_lang_Float" size="3"><entry>-250.19098</entry><entry>0.15641022</entry><entry>-201.37164</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_48"><translation><vector jtype="java_lang_Float" size="3"><entry>-254.28821</entry><entry>0.15641022</entry><entry>-192.82996</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_49"><translation><vector jtype="java_lang_Float" size="3"><entry>-257.205</entry><entry>48.68353</entry><entry>-184.06253</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_50"><translation><vector jtype="java_lang_Float" size="3"><entry>-258.2119</entry><entry>40.149742</entry><entry>-182.39587</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_51"><translation><vector jtype="java_lang_Float" size="3"><entry>-219.40974</entry><entry>1.756424</entry><entry>-226.82294</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_52"><translation><vector jtype="java_lang_Float" size="3"><entry>28.285715</entry><entry>-0.0866127</entry><entry>10.285716</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_53"><translation><vector jtype="java_lang_Float" size="3"><entry>-262.34378</entry><entry>0.15638733</entry><entry>-175.62508</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_54"><translation><vector jtype="java_lang_Float" size="3"><entry>-267.37854</entry><entry>0.15638351</entry><entry>-172.50009</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_55"><translation><vector jtype="java_lang_Float" size="3"><entry>-270.12158</entry><entry>0.1563797</entry><entry>-166.66675</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_56"><translation><vector jtype="java_lang_Float" size="3"><entry>-298.4</entry><entry>0.15635681</entry><entry>-53.52858</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_57"><translation><vector jtype="java_lang_Float" size="3"><entry>-269.42712</entry><entry>0.15637207</entry><entry>-162.70839</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_58"><translation><vector jtype="java_lang_Float" size="3"><entry>-275.7986</entry><entry>28.156336</entry><entry>-150.4515</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_59"><translation><vector jtype="java_lang_Float" size="3"><entry>-260.55573</entry><entry>0.15634537</entry><entry>-77.934135</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_60"><translation><vector jtype="java_lang_Float" size="3"><entry>-261.6668</entry><entry>0.15634537</entry><entry>-77.586914</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_63"><translation><vector jtype="java_lang_Float" size="3"><entry>-283.5938</entry><entry>0.15636826</entry><entry>-131.80562</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_65"><translation><vector jtype="java_lang_Float" size="3"><entry>-291.70135</entry><entry>38.556316</entry><entry>-114.34032</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_66"><translation><vector jtype="java_lang_Float" size="3"><entry>-293.8716</entry><entry>0.15636063</entry><entry>-108.57645</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_67"><translation><vector jtype="java_lang_Float" size="3"><entry>-296.7883</entry><entry>0.15635681</entry><entry>-102.15283</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_68"><translation><vector jtype="java_lang_Float" size="3"><entry>-300.67715</entry><entry>23.356321</entry><entry>-91.493126</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_69"><translation><vector jtype="java_lang_Float" size="3"><entry>-281.5143</entry><entry>0.15636063</entry><entry>-100.32861</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_70"><translation><vector jtype="java_lang_Float" size="3"><entry>-306.07654</entry><entry>0.15636444</entry><entry>-76.38895</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_71"><translation><vector jtype="java_lang_Float" size="3"><entry>-310.93756</entry><entry>36.156406</entry><entry>-62.204914</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_72"><translation><vector jtype="java_lang_Float" size="3"><entry>-312.7431</entry><entry>5.7563744</entry><entry>-58.437546</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_73"><translation><vector jtype="java_lang_Float" size="3"><entry>-257.57144</entry><entry>0.15637207</entry><entry>-156.8429</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_74"><translation><vector jtype="java_lang_Float" size="3"><entry>-315.8142</entry><entry>0.15634918</entry><entry>-48.00004</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_75"><translation><vector jtype="java_lang_Float" size="3"><entry>-301.98563</entry><entry>0.14635468</entry><entry>-43.48575</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_76"><translation><vector jtype="java_lang_Float" size="3"><entry>-282.08347</entry><entry>0.15634918</entry><entry>-82.72575</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_77"><translation><vector jtype="java_lang_Float" size="3"><entry>-287.23978</entry><entry>0.15636826</entry><entry>-112.361176</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_78"><translation><vector jtype="java_lang_Float" size="3"><entry>-277.96896</entry><entry>0.1463623</entry><entry>-109.28826</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_79"><translation><vector jtype="java_lang_Float" size="3"><entry>-272.71432</entry><entry>29.756325</entry><entry>-121.47148</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_81"><translation><vector jtype="java_lang_Float" size="3"><entry>-263.75027</entry><entry>0.15636826</entry><entry>-141.57996</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_83"><translation><vector jtype="java_lang_Float" size="3"><entry>-297.01422</entry><entry>0.156353</entry><entry>-41.885746</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_103"><translation><vector jtype="java_lang_Float" size="3"><entry>-289.44287</entry><entry>0.15636444</entry><entry>-77.08575</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_104"><translation><vector jtype="java_lang_Float" size="3"><entry>-288.1143</entry><entry>0.156353</entry><entry>-80.77146</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_105"><translation><vector jtype="java_lang_Float" size="3"><entry>-297.07144</entry><entry>0.14635468</entry><entry>-57.028595</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_106"><translation><vector jtype="java_lang_Float" size="3"><entry>-295.82858</entry><entry>0.14635468</entry><entry>-60.54288</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_107"><translation><vector jtype="java_lang_Float" size="3"><entry>-294.54288</entry><entry>0.14635468</entry><entry>-64.185745</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_108"><translation><vector jtype="java_lang_Float" size="3"><entry>-293.04288</entry><entry>0.14635468</entry><entry>-68.042885</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_109"><translation><vector jtype="java_lang_Float" size="3"><entry>-300.84286</entry><entry>0.14635468</entry><entry>-47.042908</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_110"><translation><vector jtype="java_lang_Float" size="3"><entry>-299.6</entry><entry>0.14635468</entry><entry>-49.82862</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_111"><translation><vector jtype="java_lang_Float" size="3"><entry>-302.6</entry><entry>0.15636063</entry><entry>-85.614365</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_112"><translation><vector jtype="java_lang_Float" size="3"><entry>-304.0571</entry><entry>0.15636444</entry><entry>-80.90007</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_113"><translation><vector jtype="java_lang_Float" size="3"><entry>-307.69998</entry><entry>0.15636063</entry><entry>-72.328636</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_114"><translation><vector jtype="java_lang_Float" size="3"><entry>-309.15714</entry><entry>0.15635681</entry><entry>-68.385765</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_116"><translation><vector jtype="java_lang_Float" size="3"><entry>-310.05713</entry><entry>0.15635681</entry><entry>-64.82862</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_117"><translation><vector jtype="java_lang_Float" size="3"><entry>-313.60004</entry><entry>0.156353</entry><entry>-54.828606</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_118"><translation><vector jtype="java_lang_Float" size="3"><entry>-314.97147</entry><entry>0.15634918</entry><entry>-51.271465</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_119"><translation><vector jtype="java_lang_Float" size="3"><entry>-280.38577</entry><entry>0.14635849</entry><entry>-103.32862</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_120"><translation><vector jtype="java_lang_Float" size="3"><entry>-278.98587</entry><entry>0.14635849</entry><entry>-106.10004</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_121"><translation><vector jtype="java_lang_Float" size="3"><entry>-276.4716</entry><entry>0.14635849</entry><entry>-112.61432</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_122"><translation><vector jtype="java_lang_Float" size="3"><entry>-275.38586</entry><entry>0.14635849</entry><entry>-115.64289</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_123"><translation><vector jtype="java_lang_Float" size="3"><entry>-274.07156</entry><entry>0.14635849</entry><entry>-118.38575</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_124"><translation><vector jtype="java_lang_Float" size="3"><entry>-271.44305</entry><entry>0.1463623</entry><entry>-124.55718</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_125"><translation><vector jtype="java_lang_Float" size="3"><entry>-270.07162</entry><entry>0.1463623</entry><entry>-127.585754</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_126"><translation><vector jtype="java_lang_Float" size="3"><entry>-268.30017</entry><entry>0.15636063</entry><entry>-131.12862</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_127"><translation><vector jtype="java_lang_Float" size="3"><entry>-267.44302</entry><entry>0.1463623</entry><entry>-134.10005</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_128"><translation><vector jtype="java_lang_Float" size="3"><entry>-265.90015</entry><entry>0.1463623</entry><entry>-137.52863</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_129"><translation><vector jtype="java_lang_Float" size="3"><entry>-262.7573</entry><entry>0.14636612</entry><entry>-144.4429</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_130"><translation><vector jtype="java_lang_Float" size="3"><entry>-261.1573</entry><entry>0.14636993</entry><entry>-148.4429</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_131"><translation><vector jtype="java_lang_Float" size="3"><entry>-259.50015</entry><entry>0.15637207</entry><entry>-152.10005</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_132"><translation><vector jtype="java_lang_Float" size="3"><entry>-292.97153</entry><entry>0.15636826</entry><entry>-110.642975</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_133"><translation><vector jtype="java_lang_Float" size="3"><entry>-290.68576</entry><entry>0.15636826</entry><entry>-117.10011</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_134"><translation><vector jtype="java_lang_Float" size="3"><entry>-289.42862</entry><entry>0.15636826</entry><entry>-119.67155</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_135"><translation><vector jtype="java_lang_Float" size="3"><entry>-288.3429</entry><entry>0.15636826</entry><entry>-121.84297</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_136"><translation><vector jtype="java_lang_Float" size="3"><entry>-286.74286</entry><entry>0.15636826</entry><entry>-124.87154</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_137"><translation><vector jtype="java_lang_Float" size="3"><entry>-285.48572</entry><entry>0.15636826</entry><entry>-127.614395</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_138"><translation><vector jtype="java_lang_Float" size="3"><entry>-282.11426</entry><entry>0.15636826</entry><entry>-135.78583</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_139"><translation><vector jtype="java_lang_Float" size="3"><entry>-280.91425</entry><entry>0.15636826</entry><entry>-138.4144</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_140"><translation><vector jtype="java_lang_Float" size="3"><entry>-280.11426</entry><entry>0.15637589</entry><entry>-141.55725</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_141"><translation><vector jtype="java_lang_Float" size="3"><entry>-277.6</entry><entry>0.15637589</entry><entry>-146.35727</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_143"><translation><vector jtype="java_lang_Float" size="3"><entry>-273.59995</entry><entry>0.15637207</entry><entry>-152.9287</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_144"><translation><vector jtype="java_lang_Float" size="3"><entry>-270.97137</entry><entry>0.15636826</entry><entry>-155.72871</entry></vector></translation></wayPoint>
+		</wayPoints>
+		<segments debug="false">
+			<segment id="Segment_WP_1_WP_70"><from>WP_1</from><to>WP_70</to><speed>50.0</speed><jump>false</jump><probability>0.10</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_1_WP_103"><from>WP_1</from><to>WP_103</to></segment>
+			<segment id="Segment_WP_2_WP_4"><from>WP_2</from><to>WP_4</to><speed>50.0</speed><jump>false</jump><probability>0.10</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_2_WP_69"><from>WP_2</from><to>WP_69</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_4_WP_68"><from>WP_4</from><to>WP_68</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_5_WP_6"><from>WP_5</from><to>WP_6</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_6_WP_69"><from>WP_6</from><to>WP_69</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_7_WP_53"><from>WP_7</from><to>WP_53</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_11_WP_12"><from>WP_11</from><to>WP_12</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_11_WP_56"><from>WP_11</from><to>WP_56</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_12_WP_13"><from>WP_12</from><to>WP_13</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_13_WP_1"><from>WP_13</from><to>WP_1</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_13_WP_76"><from>WP_13</from><to>WP_76</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_14_WP_15"><from>WP_14</from><to>WP_15</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_15_WP_16"><from>WP_15</from><to>WP_16</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_16_WP_17"><from>WP_16</from><to>WP_17</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_17_WP_18"><from>WP_17</from><to>WP_18</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_18_WP_19"><from>WP_18</from><to>WP_19</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_19_WP_20"><from>WP_19</from><to>WP_20</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_19_WP_79"><from>WP_19</from><to>WP_79</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_20_WP_21"><from>WP_20</from><to>WP_21</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_21_WP_22"><from>WP_21</from><to>WP_22</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_21_WP_81"><from>WP_21</from><to>WP_81</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_22_WP_23"><from>WP_22</from><to>WP_23</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_23_WP_24"><from>WP_23</from><to>WP_24</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_24_WP_25"><from>WP_24</from><to>WP_25</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_25_WP_26"><from>WP_25</from><to>WP_26</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_25_WP_53"><from>WP_25</from><to>WP_53</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_26_WP_27"><from>WP_26</from><to>WP_27</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_27_WP_28"><from>WP_27</from><to>WP_28</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_27_WP_49"><from>WP_27</from><to>WP_49</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_28_WP_29"><from>WP_28</from><to>WP_29</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_29_WP_30"><from>WP_29</from><to>WP_30</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_30_WP_32"><from>WP_30</from><to>WP_32</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_31_WP_33"><from>WP_31</from><to>WP_33</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_32_WP_31"><from>WP_32</from><to>WP_31</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_32_WP_48"><from>WP_32</from><to>WP_48</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_33_WP_34"><from>WP_33</from><to>WP_34</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_33_WP_46"><from>WP_33</from><to>WP_46</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_34_WP_35"><from>WP_34</from><to>WP_35</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_35_WP_51"><from>WP_35</from><to>WP_51</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_36_WP_38"><from>WP_36</from><to>WP_38</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_36_WP_43"><from>WP_36</from><to>WP_43</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_37_WP_39"><from>WP_37</from><to>WP_39</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_37_WP_41"><from>WP_37</from><to>WP_41</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_38_WP_37"><from>WP_38</from><to>WP_37</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_39_WP_40"><from>WP_39</from><to>WP_40</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_40_WP_41"><from>WP_40</from><to>WP_41</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_41_WP_42"><from>WP_41</from><to>WP_42</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_42_WP_38"><from>WP_42</from><to>WP_38</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_42_WP_43"><from>WP_42</from><to>WP_43</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_43_WP_44"><from>WP_43</from><to>WP_44</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_44_WP_35"><from>WP_44</from><to>WP_35</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_44_WP_45"><from>WP_44</from><to>WP_45</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_45_WP_46"><from>WP_45</from><to>WP_46</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_46_WP_47"><from>WP_46</from><to>WP_47</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_47_WP_31"><from>WP_47</from><to>WP_31</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_47_WP_48"><from>WP_47</from><to>WP_48</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_48_WP_49"><from>WP_48</from><to>WP_49</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_49_WP_50"><from>WP_49</from><to>WP_50</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_50_WP_7"><from>WP_50</from><to>WP_7</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_50_WP_26"><from>WP_50</from><to>WP_26</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_51_WP_36"><from>WP_51</from><to>WP_36</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_53_WP_54"><from>WP_53</from><to>WP_54</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_54_WP_55"><from>WP_54</from><to>WP_55</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_55_WP_57"><from>WP_55</from><to>WP_57</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_56_WP_72"><from>WP_56</from><to>WP_72</to><speed>50.0</speed><jump>false</jump><probability>0.10</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_56_WP_105"><from>WP_56</from><to>WP_105</to></segment>
+			<segment id="Segment_WP_57_WP_73"><from>WP_57</from><to>WP_73</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_57_WP_144"><from>WP_57</from><to>WP_144</to></segment>
+			<segment id="Segment_WP_58_WP_141"><from>WP_58</from><to>WP_141</to></segment>
+			<segment id="Segment_WP_63_WP_137"><from>WP_63</from><to>WP_137</to></segment>
+			<segment id="Segment_WP_65_WP_77"><from>WP_65</from><to>WP_77</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_65_WP_132"><from>WP_65</from><to>WP_132</to></segment>
+			<segment id="Segment_WP_66_WP_67"><from>WP_66</from><to>WP_67</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_67_WP_5"><from>WP_67</from><to>WP_5</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_67_WP_68"><from>WP_67</from><to>WP_68</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_68_WP_111"><from>WP_68</from><to>WP_111</to></segment>
+			<segment id="Segment_WP_69_WP_16"><from>WP_69</from><to>WP_16</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_69_WP_119"><from>WP_69</from><to>WP_119</to></segment>
+			<segment id="Segment_WP_70_WP_113"><from>WP_70</from><to>WP_113</to></segment>
+			<segment id="Segment_WP_71_WP_72"><from>WP_71</from><to>WP_72</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_72_WP_117"><from>WP_72</from><to>WP_117</to></segment>
+			<segment id="Segment_WP_73_WP_22"><from>WP_73</from><to>WP_22</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_74_WP_75"><from>WP_74</from><to>WP_75</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_75_WP_83"><from>WP_75</from><to>WP_83</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_75_WP_109"><from>WP_75</from><to>WP_109</to></segment>
+			<segment id="Segment_WP_76_WP_2"><from>WP_76</from><to>WP_2</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_76_WP_14"><from>WP_76</from><to>WP_14</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_77_WP_78"><from>WP_77</from><to>WP_78</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_78_WP_18"><from>WP_78</from><to>WP_18</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_78_WP_121"><from>WP_78</from><to>WP_121</to></segment>
+			<segment id="Segment_WP_79_WP_124"><from>WP_79</from><to>WP_124</to></segment>
+			<segment id="Segment_WP_79_WP_136"><from>WP_79</from><to>WP_136</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_81_WP_129"><from>WP_81</from><to>WP_129</to></segment>
+			<segment id="Segment_WP_81_WP_141"><from>WP_81</from><to>WP_141</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_83_WP_11"><from>WP_83</from><to>WP_11</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_103_WP_104"><from>WP_103</from><to>WP_104</to></segment>
+			<segment id="Segment_WP_103_WP_112"><from>WP_103</from><to>WP_112</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_104_WP_2"><from>WP_104</from><to>WP_2</to></segment>
+			<segment id="Segment_WP_104_WP_111"><from>WP_104</from><to>WP_111</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_105_WP_71"><from>WP_105</from><to>WP_71</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_105_WP_106"><from>WP_105</from><to>WP_106</to></segment>
+			<segment id="Segment_WP_106_WP_107"><from>WP_106</from><to>WP_107</to></segment>
+			<segment id="Segment_WP_106_WP_116"><from>WP_106</from><to>WP_116</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_107_WP_108"><from>WP_107</from><to>WP_108</to></segment>
+			<segment id="Segment_WP_107_WP_114"><from>WP_107</from><to>WP_114</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_108_WP_1"><from>WP_108</from><to>WP_1</to></segment>
+			<segment id="Segment_WP_108_WP_113"><from>WP_108</from><to>WP_113</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_109_WP_110"><from>WP_109</from><to>WP_110</to></segment>
+			<segment id="Segment_WP_109_WP_118"><from>WP_109</from><to>WP_118</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_110_WP_56"><from>WP_110</from><to>WP_56</to></segment>
+			<segment id="Segment_WP_110_WP_117"><from>WP_110</from><to>WP_117</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_111_WP_112"><from>WP_111</from><to>WP_112</to></segment>
+			<segment id="Segment_WP_112_WP_70"><from>WP_112</from><to>WP_70</to></segment>
+			<segment id="Segment_WP_113_WP_114"><from>WP_113</from><to>WP_114</to></segment>
+			<segment id="Segment_WP_114_WP_116"><from>WP_114</from><to>WP_116</to></segment>
+			<segment id="Segment_WP_116_WP_71"><from>WP_116</from><to>WP_71</to></segment>
+			<segment id="Segment_WP_117_WP_118"><from>WP_117</from><to>WP_118</to></segment>
+			<segment id="Segment_WP_118_WP_74"><from>WP_118</from><to>WP_74</to></segment>
+			<segment id="Segment_WP_119_WP_66"><from>WP_119</from><to>WP_66</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_119_WP_120"><from>WP_119</from><to>WP_120</to></segment>
+			<segment id="Segment_WP_120_WP_78"><from>WP_120</from><to>WP_78</to></segment>
+			<segment id="Segment_WP_120_WP_132"><from>WP_120</from><to>WP_132</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_121_WP_122"><from>WP_121</from><to>WP_122</to></segment>
+			<segment id="Segment_WP_121_WP_133"><from>WP_121</from><to>WP_133</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_122_WP_123"><from>WP_122</from><to>WP_123</to></segment>
+			<segment id="Segment_WP_122_WP_134"><from>WP_122</from><to>WP_134</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_123_WP_79"><from>WP_123</from><to>WP_79</to></segment>
+			<segment id="Segment_WP_123_WP_135"><from>WP_123</from><to>WP_135</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_124_WP_125"><from>WP_124</from><to>WP_125</to></segment>
+			<segment id="Segment_WP_124_WP_137"><from>WP_124</from><to>WP_137</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_125_WP_63"><from>WP_125</from><to>WP_63</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_125_WP_126"><from>WP_125</from><to>WP_126</to></segment>
+			<segment id="Segment_WP_126_WP_127"><from>WP_126</from><to>WP_127</to></segment>
+			<segment id="Segment_WP_126_WP_138"><from>WP_126</from><to>WP_138</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_127_WP_128"><from>WP_127</from><to>WP_128</to></segment>
+			<segment id="Segment_WP_127_WP_139"><from>WP_127</from><to>WP_139</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_128_WP_81"><from>WP_128</from><to>WP_81</to></segment>
+			<segment id="Segment_WP_128_WP_140"><from>WP_128</from><to>WP_140</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_129_WP_58"><from>WP_129</from><to>WP_58</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_129_WP_130"><from>WP_129</from><to>WP_130</to></segment>
+			<segment id="Segment_WP_130_WP_131"><from>WP_130</from><to>WP_131</to></segment>
+			<segment id="Segment_WP_130_WP_143"><from>WP_130</from><to>WP_143</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_131_WP_73"><from>WP_131</from><to>WP_73</to></segment>
+			<segment id="Segment_WP_131_WP_144"><from>WP_131</from><to>WP_144</to><probability>0.10</probability></segment>
+			<segment id="Segment_WP_132_WP_66"><from>WP_132</from><to>WP_66</to></segment>
+			<segment id="Segment_WP_133_WP_65"><from>WP_133</from><to>WP_65</to></segment>
+			<segment id="Segment_WP_134_WP_133"><from>WP_134</from><to>WP_133</to></segment>
+			<segment id="Segment_WP_135_WP_134"><from>WP_135</from><to>WP_134</to></segment>
+			<segment id="Segment_WP_136_WP_135"><from>WP_136</from><to>WP_135</to></segment>
+			<segment id="Segment_WP_137_WP_136"><from>WP_137</from><to>WP_136</to></segment>
+			<segment id="Segment_WP_138_WP_63"><from>WP_138</from><to>WP_63</to></segment>
+			<segment id="Segment_WP_139_WP_138"><from>WP_139</from><to>WP_138</to></segment>
+			<segment id="Segment_WP_140_WP_139"><from>WP_140</from><to>WP_139</to></segment>
+			<segment id="Segment_WP_141_WP_140"><from>WP_141</from><to>WP_140</to></segment>
+			<segment id="Segment_WP_143_WP_58"><from>WP_143</from><to>WP_58</to></segment>
+			<segment id="Segment_WP_144_WP_143"><from>WP_144</from><to>WP_143</to></segment>
+		</segments>
+	</road>
+
+
+</scenario>

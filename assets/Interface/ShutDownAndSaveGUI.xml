@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- load default styles and controls -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <useStyles filename="nifty-default-styles.xml" />
+  <useControls filename="nifty-default-controls.xml" />
+  <style id="console-red" base="button-font">
+    <attributes font="fonts/menu.fnt" color="#f00f"/>
+  </style>
+  <style id="console-white" base="button-font">
+    <attributes font="fonts/menu.fnt" color="#ffff"/>
+  </style>
+  <style id="console-font">
+    <attributes font="fonts/verdana-48-regular.fnt" color="#00ff"/>
+  </style>
+	
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- start screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  
+	<screen id="start" defaultFocusElement="saveButton" controller="eu.opends.networkGenerator.niftyGui.ShutDownAndSaveGUIController">
+	
+	<layer id="topLayer" childLayout="center" backgroundColor="#0008">
+		<panel childLayout="vertical" style="nifty-panel-red" width="350px" height="150px" valign="center" align="center">
+			
+			<panel childLayout="center" height="10px"/>
+			<panel childLayout="vertical" height="30px" valign="center">
+				<control name="label" id="closeMessageText" text="Do you really want to quit?" 
+					width="100%" heigth="100%" color="#ffffffff" textHAlign="center"/>
+			</panel>
+			<panel childLayout="center" height="10px"/>
+			<panel childLayout="vertical" height="20px" width="100%" align="center" valign="center">
+				<panel childLayout="horizontal" height="20px" width="230px" align="center" valign="center">
+					<panel childLayout="center" height="100%" width="20px" align="right">
+						<control name="checkbox" id="joinSegmentsCheckBox" align="right" />
+					</panel>
+					<panel childLayout="center" height="100%" width="10px" align="right"/>
+					<panel childLayout="center" height="100%" width="200px" align="left">	
+						<control name="label" id="joinSegmentsText" text="Join segments whenever possible" 
+							width="100%" heigth="100%" color="#ffffffff" textHAlign="left"/>
+					</panel>
+				</panel>
+			</panel>
+			<panel childLayout="horizontal" height="60px" width="100%" align="center">
+				<panel childLayout="center" height="100%" width="30%" align="center">
+					<control id="saveButton" name="button" label="Quit &amp; Save"
+						align="center" height="30px" width="90px">
+						<interact onClick="clickCloseAndSaveButton()" />
+					</control>
+				</panel>
+				<panel childLayout="center" height="100%" width="40%" align="center">
+					<control id="closeButton" name="button" label="Quit"
+						align="center" height="30px" width="90px">
+						<interact onClick="clickCloseButton()" />
+					</control>
+				</panel>
+				<panel childLayout="center" height="100%" width="30%" align="center">
+					<control id="cancelButton" name="button" label="Cancel"
+						align="center" height="30px" width="90px">
+						<interact onClick="clickCancelButton()" />
+					</control>
+				</panel>
+			</panel>
+		</panel>
+	</layer>
+				
+	</screen>
+	
+
+	
+</nifty>

@@ -1,0 +1,2 @@
+dirichlet.o: src/util/dirichlet.cpp include/util/dirichlet.h \
+ include/util/gamma.h include/util/random.h

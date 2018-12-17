@@ -1,0 +1,1 @@
+gamma.o: src/util/gamma.cpp include/util/gamma.h include/util/random.h

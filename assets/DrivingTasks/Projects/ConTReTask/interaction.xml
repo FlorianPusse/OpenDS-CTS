@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interaction xmlns="http://opends.eu/drivingtask/interaction"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://opends.eu/drivingtask/interaction ../../Schema/interaction.xsd">
+
+
+	<activities>
+		<activity id="resumeSim">
+			<action id="resumeSimulation" delay="0" repeat="0">
+			</action>
+		</activity>
+		<activity id="speedChange">
+			<action id="setupContreTask" delay="0" repeat="0">
+				<parameter name="targetObjectSpeed" value="5" />
+			</action>
+		</activity>
+		<activity id="shutDownSim">
+			<action id="shutDownSimulation" delay="0" repeat="0">
+			</action>
+		</activity>
+		<activity id="sendText1">
+			<action id="sendMessage" delay="0" repeat="4">
+				<parameter name="text" value="Hello World" />
+				<parameter name="duration" value="3" />
+			</action>
+		</activity>
+		<activity id="playSound1">
+			<action id="playSound" delay="0" repeat="4">
+				<parameter name="soundID" value="beep" />
+			</action>
+		</activity>
+	</activities>
+	
+	<triggers>
+		<trigger id="TTLTriggerResume" priority="1">
+			<activities>
+				<activity ref="resumeSim"/>
+			</activities>		
+			<condition>remote:resume</condition>
+		</trigger>
+		<trigger id="TTLTriggerSpeedChange" priority="1">
+			<activities>
+				<activity ref="speedChange"/>
+			</activities>		
+			<condition>remote:speed</condition>
+		</trigger>
+		<trigger id="TTLTriggerShutDown" priority="1">
+			<activities>
+				<activity ref="shutDownSim"/>
+			</activities>		
+			<condition>remote:shutDown</condition>
+		</trigger>
+		<trigger id="SendTextWhenCameraAtTriggerPos1" priority="1">
+			<activities>
+				<activity ref="sendText1"/>
+			</activities>		
+			<condition>cameraWaypoint:triggerPos1</condition>
+		</trigger>
+		
+		<trigger id="PlaySoundWhenCameraAtTriggerPos2" priority="1">
+			<activities>
+				<activity ref="playSound1"/>
+			</activities>		
+			<condition>cameraWaypoint:triggerPos2</condition>
+		</trigger>
+	</triggers>
+	
+</interaction>

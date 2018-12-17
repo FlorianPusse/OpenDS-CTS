@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://opends.eu/drivingtask/settings"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://opends.eu/drivingtask/settings ../../Schema/settings.xsd">
+
+	<general>
+		<driverName>default driver</driverName>
+		<showStats>false</showStats>
+		<!-- 
+		<numberOfScreens>3</numberOfScreens>
+		<angleBetweenAdjacentCameras>20</angleBetweenAdjacentCameras>
+		-->
+	</general>
+	
+	<settingsControllerServer>
+		<startServer>true</startServer>
+		<port>123</port>
+	</settingsControllerServer>
+	
+	<objectLocator>
+		<enable>true</enable>
+		<fileName>trafficObjects.txt</fileName>	
+	</objectLocator>
+</settings>

@@ -1,0 +1,1 @@
+tinystr.o: src/util/tinyxml/tinystr.cpp include/util/tinyxml/tinystr.h

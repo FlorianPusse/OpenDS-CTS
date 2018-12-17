@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://opends.eu/drivingtask/scenario"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://opends.eu/drivingtask/scenario ../../Schema/scenario.xsd">
+
+	<environment>
+		<weather>
+			<snowingPercentage>-1</snowingPercentage>
+			<rainingPercentage>-1</rainingPercentage>
+			<fogPercentage>-1</fogPercentage>
+		</weather>
+	</environment>
+
+	<driver>
+		<car id="" ref="driverCar" profile="">
+			<tires profile="">
+				<type>winter</type>
+				<size>16</size>
+			</tires>
+			<engine profile="">
+				<engineOn>true</engineOn>
+				<minSpeed>0</minSpeed>
+				<maxSpeed>180</maxSpeed>
+				<acceleration>3.5</acceleration>
+				<minRPM>750</minRPM>
+				<maxRPM>7500</maxRPM>
+			</engine>
+			<transmission>
+				<automatic>true</automatic>
+				<reverse>3.182</reverse>
+				<forward>
+					<vector jtype="java_lang_Float" size="6">
+						<entry>3.615</entry>
+						<entry>1.955</entry>
+						<entry>1.281</entry>
+						<entry>0.973</entry>
+						<entry>0.778</entry>
+						<entry>0.646</entry>
+					</vector>
+				</forward>
+			</transmission>
+			<suspension>
+				<stiffness>120</stiffness>
+				<compression>0.2</compression>
+				<damping>0.3</damping>
+			</suspension>
+			<wheel>
+				<frictionSlip>50</frictionSlip>
+			</wheel>
+			<brake profile="">
+				<decelerationFreeWheel>2.0</decelerationFreeWheel>
+				<decelerationBrake>10</decelerationBrake>
+			</brake>
+		</car>
+	</driver>
+
+	<traffic>
+		<pedestrian id="ped1">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>10.0</maxSpeed>
+			<giveWayDistance>0.1</giveWayDistance>
+			<intersectionObservationDistance>15.0</intersectionObservationDistance>
+			<minIntersectionClearance>5.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_Start3</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped2">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>6.5</maxSpeed>
+			<giveWayDistance>0.0</giveWayDistance>
+			<intersectionObservationDistance>0.0</intersectionObservationDistance>
+			<minIntersectionClearance>0.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_Start</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped3">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>8.0</maxSpeed>
+			<giveWayDistance>0.5</giveWayDistance>
+			<intersectionObservationDistance>0.5</intersectionObservationDistance>
+			<minIntersectionClearance>0.5</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_Start2</startWayPoint>
+		</pedestrian>
+		<pedestrian id="ped4">
+			<modelPath>Models/Humans/male/male.scene</modelPath>
+			<mass>80.0</mass>
+			<animationWalk>WalkBaked</animationWalk>
+			<animationStand>Stand</animationStand>
+			<localTranslation><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry></vector></localTranslation>
+			<localRotation quaternion="true"><vector><entry>0.0</entry><entry>0.0</entry><entry>0.0</entry><entry>1.0</entry></vector></localRotation>
+			<scale>1.0</scale>
+			<maxSpeed>6.5</maxSpeed>
+			<giveWayDistance>15.0</giveWayDistance>
+			<intersectionObservationDistance>15.0</intersectionObservationDistance>
+			<minIntersectionClearance>5.0</minIntersectionClearance>
+			<enabled>true</enabled>
+			<minDistanceFromPath>1.0</minDistanceFromPath>
+			<maxDistanceFromPath>1.1</maxDistanceFromPath>
+			<startWayPoint>WP_Start4</startWayPoint>
+		</pedestrian>
+	</traffic>
+
+	<road>
+		<wayPoints debug="false">
+			<wayPoint id="WP_EndCross"><translation><vector jtype="java_lang_Float" size="3"><entry>-258.77155</entry><entry>0.15634537</entry><entry>-153.77144</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_Start"><translation><vector jtype="java_lang_Float" size="3"><entry>-287.08557</entry><entry>0.15634537</entry><entry>-111.00003</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_StartCross"><translation><vector jtype="java_lang_Float" size="3"><entry>-267.5001</entry><entry>0.15634537</entry><entry>-157.51433</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_Start2"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15637207</entry><entry>0</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_StartCross2"><translation><vector jtype="java_lang_Float" size="3"><entry>100</entry><entry>0.15637207</entry><entry>100</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_EndCross2"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15636444</entry><entry>0</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_Start3"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15637207</entry><entry>0</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_StartCross3"><translation><vector jtype="java_lang_Float" size="3"><entry>100</entry><entry>0.15637207</entry><entry>100</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_EndCross3"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15636444</entry><entry>0</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_Start4"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15637207</entry><entry>0</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_StartCross4"><translation><vector jtype="java_lang_Float" size="3"><entry>100</entry><entry>0.15637207</entry><entry>100</entry></vector></translation></wayPoint>
+			<wayPoint id="WP_EndCross4"><translation><vector jtype="java_lang_Float" size="3"><entry>0</entry><entry>0.15636444</entry><entry>0</entry></vector></translation></wayPoint>
+		</wayPoints>
+		<segments debug="false">
+			<segment id="Segment_WP_Start2_WP_StartCross2"><from>WP_Start2</from><to>WP_StartCross2</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_StartCross2_WP_EndCross2"><from>WP_StartCross2</from><to>WP_EndCross2</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_StartCross_WP_EndCross"><from>WP_StartCross</from><to>WP_EndCross</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_Start_WP_StartCross"><from>WP_Start</from><to>WP_StartCross</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_Start3_WP_StartCross3"><from>WP_Start3</from><to>WP_StartCross3</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_StartCross3_WP_EndCross3"><from>WP_StartCross3</from><to>WP_EndCross3</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_Start4_WP_StartCross4"><from>WP_Start4</from><to>WP_StartCross4</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+			<segment id="Segment_WP_StartCross4_WP_EndCross4"><from>WP_StartCross4</from><to>WP_EndCross4</to><speed>50.0</speed><jump>false</jump><probability>0.5</probability><curveTension>0.05</curveTension></segment>
+		</segments>
+	</road>
+
+
+</scenario>

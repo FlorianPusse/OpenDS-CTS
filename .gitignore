@@ -1,0 +1,37 @@
+analyzerData/
+.idea/
+out/
+bin/
+
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+bin/eu/opends/main/*
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+ISDESPOT/reactive-smart/is-despot/problems/reactive_car/cmake-build-debug/*
+ISDESPOT/reactive-smart/is-despot/build/*
+ISDESPOT/isdespot-car-sim-master/is-despot/problems/isdespotp_car/cmake-build-debug/*
+ISDESPOT/isdespot-car-sim-master/is-despot/build/*
+ISDESPOT/smart-car-sim-master/is-despot/problems/hybridVisual_car/cmake-build-debug/*
+ISDESPOT/smart-car-sim-master/is-despot/build/*
+Python/GA3C-DeepNavigationWithNavigation/__pycache__/*
+Python/GA3C-DeepNavigationWithNavigation/logs/*

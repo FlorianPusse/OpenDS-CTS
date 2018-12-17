@@ -1,0 +1,1 @@
+logging.o: src/util/logging.cpp include/util/logging.h
